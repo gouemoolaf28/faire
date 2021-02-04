@@ -1,5 +1,4 @@
 import requests
-import gspread
 from main import add_brand
 from fake_useragent import UserAgent
 from json.decoder import JSONDecodeError
