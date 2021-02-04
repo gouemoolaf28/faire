@@ -11,6 +11,7 @@ TABLES['faire_brand'] = (
     "`id` varchar(250) NOT NULL,"
     "`name` varchar(250),"
     "`country` varchar(250),"
+    "`date` date,"
     "PRIMARY KEY (`id`)"
     ") ENGINE=InnoDB"
 )

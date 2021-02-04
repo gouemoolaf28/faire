@@ -1,4 +1,5 @@
 import requests
+from datetime import date
 from main import add_brand
 from fake_useragent import UserAgent
 from json.decoder import JSONDecodeError
@@ -30,13 +31,15 @@ for brand in brands:
         brand_id = dat['brand']['token']
         name = dat['brand']['name'].lower()
         country = dat['brand']['based_in']
+
         brandView = {
             'brand_id': brand_id,
             'name': name,
-            'country': country
+            'country': country,
+            'date': date.today()
         }
 
-        add_brand(brandView['brand_id'], brandView['name'], brandView['country'])
+        add_brand(brandView['brand_id'], brandView['name'], brandView['country'], brandView['date'])
 
         print(brandView)
 
@@ -44,9 +47,10 @@ for brand in brands:
         brandView = {
             'brand_id': brand_id,
             'name': name,
-            'country': None
+            'country': None,
+            'date': date.today()
         }
         
-        add_brand(brandView['brand_id'], brandView['name'], brandView['country'])
+        add_brand(brandView['brand_id'], brandView['name'], brandView['country'], brandView['date'])
         print(brandView)
         continue
