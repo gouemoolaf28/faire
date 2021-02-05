@@ -54,3 +54,5 @@ for brand in brands:
         add_brand(brandView['brand_id'], brandView['name'], brandView['country'], brandView['date'])
         print(brandView)
         continue
+
+
